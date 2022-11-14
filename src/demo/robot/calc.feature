@@ -4,7 +4,6 @@ Feature: windows calculator
 	instructions here: https://github.com/intuit/karate/wiki/ZIP-Release#karate-robot
 Background:
 	* def file_data = read("file_data.json") 
-	
 
 Scenario:
 * print file_data.Number1
@@ -12,7 +11,7 @@ Scenario:
 * click('Clear')
 * click(file_data.Number1)
 * click('Plus')
-* click('Two')
+* click(file_data.Number2)
 * click('Equals')
 * match locate('#CalculatorResults').name == 'Display is 3'
 * screenshot()
